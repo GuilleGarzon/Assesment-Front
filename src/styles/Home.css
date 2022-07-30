@@ -28,14 +28,14 @@
   color: white;
   font-size: 20px;
   font-weight: 500;
-  margin-left: 40px;
+  margin-left: 0;
   padding: 10px;
   text-decoration: none;
 }
 
 .header__h1 {
   color: white;
-  margin-left: 100px;
+  margin-left: 40px;
   text-transform: uppercase;
 }
 
@@ -148,6 +148,10 @@
 
   .aside__button:hover {
     opacity: 0.9;
+  }
+
+  .header__link {
+    margin-left: 40px;
   }
 
   .header__h1 {
