@@ -24,22 +24,22 @@ function ProductDetail() {
         <main className='container'>
           <h2 className='container__title'>{ product.title }</h2>
           <p className='container__subtitle'> Price:
-            <spam className='container__spam'> $ { product.price } </spam>
+            <span className='container__span'> $ { product.price } </span>
           </p>
           <p className='container__subtitle'> Description:
-            <spam className='container__spam'> { product.description }.</spam>
+            <span className='container__span'> { product.description }</span>
           </p>
           <p className='container__subtitle'> Category:
-            <spam className='container__spam'> { product.category } </spam>
+            <span className='container__span'> { product.category } </span>
           </p>
           {
             product.rating ? (
               <>
                 <p className='container__subtitle'> Rate:
-                  <spam className='container__spam'> { product.rating.rate } </spam>
+                  <span className='container__span'> { product.rating.rate } </span>
                 </p>
                 <p className='container__subtitle'> Count:
-                  <spam className='container__spam'> { product.rating.count } </spam>
+                  <span className='container__span'> { product.rating.count } </span>
                 </p>
               </>
             ) : null
