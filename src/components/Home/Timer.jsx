@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../../styles/Home.css';
 
-function Timer({ link })  {
+const Timer = ({ link }) => {
 
   const temp = Math.round(Math.random() * 60);
   const [time, setTime] = useState(temp);
@@ -16,11 +16,11 @@ function Timer({ link })  {
   return (
     <aside className='aside'>
       <h5 className='aside__title'>{time} seconds</h5>
-      {time > 0 ? (
+      {time > 0 && (
           <Link to={link}>
             <button type='button' className='aside__button'>Go to Detail</button>
           </Link>
-        ) : null
+        )
       }
     </aside>
   );

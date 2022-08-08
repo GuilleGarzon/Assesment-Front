@@ -1,16 +1,14 @@
-import HeaderHome from '../../components/Home/HeaderHome';
-import ProductCard from '../../components/Home/ProductCard';
+import NavBar from '../../components/Home/NavBar';
+import ProductCards from '../../components/Home/ProductCards';
 import '../../styles/Home.css';
 
-function Home() {
-  return (
-    <div className='home'>
-      <HeaderHome />
-      <div className='home__section'>
-        <ProductCard />
-      </div>
-    </div>
-  );
-}
+const Home = () => (
+	<div className='home'>
+		<NavBar />
+		<div className='home__section'>
+			<ProductCards />
+		</div>
+	</div>
+);
 
 export default Home;

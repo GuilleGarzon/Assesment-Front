@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProduct } from '../../services/Products';
-import HeaderProductDetail from '../../components/ProducDetail/HeaderProductDetail';
+import NavBar from '../../components/Home/NavBar'
 import '../../styles/ProductDetail.css'
 
-function ProductDetail() {
+const ProductDetail = () => {
 
   const [product, setProduct] = useState([]);
   const { id } = useParams()
@@ -20,7 +20,7 @@ function ProductDetail() {
   return (
 
       <>
-        <HeaderProductDetail />
+        <NavBar />
         <main className='container'>
           <h2 className='container__title'>{ product.title }</h2>
           <p className='container__subtitle'> Price:
@@ -33,7 +33,7 @@ function ProductDetail() {
             <span className='container__span'> { product.category } </span>
           </p>
           {
-            product.rating ? (
+            product.rating && (
               <>
                 <p className='container__subtitle'> Rate:
                   <span className='container__span'> { product.rating.rate } </span>
@@ -42,7 +42,7 @@ function ProductDetail() {
                   <span className='container__span'> { product.rating.count } </span>
                 </p>
               </>
-            ) : null
+            )
 
           }
           <img className='container__image' src={product.image} alt={product.title} />
